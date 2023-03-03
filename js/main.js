@@ -259,64 +259,71 @@ function addSavedTasks(){
     let j = 2; //Iterable value
     let cards;
     //Will divide by 3 because we have 3 values per card
-    for(let i = 0; i < (listTaskWork.length/3); i++){
-        new Card(arrayWorkText[i],arrayWorkDate[i]).createCard(workSection);
-        cards = workSection.querySelectorAll('div'); 
-        let btn2 = (cards[j].children);//Get the btn edit 
-        if(arrayWorkID[i] === '1'){ //Verify if a card was checked
-            cardChecked(btn2[0]);
+    if(Array.isArray(listTaskWork)){
+        for(let i = 0; i < (listTaskWork.length/3); i++){
+            new Card(arrayWorkText[i],arrayWorkDate[i]).createCard(workSection);
+            cards = workSection.querySelectorAll('div'); 
+            let btn2 = (cards[j].children);//Get the btn edit 
+            if(arrayWorkID[i] === '1'){ //Verify if a card was checked
+                cardChecked(btn2[0]);
+            }
+            else{
+                cardUncheked(btn2[0]);
+            }
+            j+=2;
         }
-        else{
-            cardUncheked(btn2[0]);
-        }
-        j+=2;
     }
 
     //Iterable value
     let k = 2;
-    for(let i = 0; i < (listTaskStudy.length/3); i++){
-        new Card(arrayStudyText[i],arrayStudyDate[i]).createCard(studySection);
-        cards = studySection.querySelectorAll('div'); 
-        let btn2 = (cards[k].children);//Get the btn edit 
-        if(arrayStudyID[i] === '1'){ //Verify if a card was checked
-            cardChecked(btn2[0]);
+    if(Array.isArray(listTaskStudy)){
+        for(let i = 0; i < (listTaskStudy.length/3); i++){
+            new Card(arrayStudyText[i],arrayStudyDate[i]).createCard(studySection);
+            cards = studySection.querySelectorAll('div'); 
+            let btn2 = (cards[k].children);//Get the btn edit 
+            if(arrayStudyID[i] === '1'){ //Verify if a card was checked
+                cardChecked(btn2[0]);
+            }
+            else{
+                cardUncheked(btn2[0]);
+            }
+            k+=2;
         }
-        else{
-            cardUncheked(btn2[0]);
-        }
-        k+=2;
     }
 
     //Iterable value
     let l = 2;
-    for(let i = 0; i < (listTaskHome.length/3); i++){
-        new Card(arrayHomeText[i],arrayHomeDate[i]).createCard(homeSection);
-        cards = homeSection.querySelectorAll('div'); 
-        let btn2 = (cards[l].children);//Get the btn edit 
-        if(arrayHomeID[i] === '1'){ //Verify if a card was checked
-            cardChecked(btn2[0]);
+    if(Array.isArray(listTaskHome)){
+        for(let i = 0; i < (listTaskHome.length/3); i++){
+            new Card(arrayHomeText[i],arrayHomeDate[i]).createCard(homeSection);
+            cards = homeSection.querySelectorAll('div'); 
+            let btn2 = (cards[l].children);//Get the btn edit 
+            if(arrayHomeID[i] === '1'){ //Verify if a card was checked
+                cardChecked(btn2[0]);
+            }
+            else{
+                cardUncheked(btn2[0]);
+            }
+            l+=2;
         }
-        else{
-            cardUncheked(btn2[0]);
-        }
-        l+=2;
     }
 
     //Iterable value
     let m = 2;
-    for(let i = 0; i < (listTaskLeisure.length/3); i++){
-        new Card(arrayLeisureText[i],arrayLeisureDate[i]).createCard(leisureSection);
-        cards = leisureSection.querySelectorAll('div'); 
-        let btn2 = (cards[m].children);//Get the btn edit 
-        if(arrayLeisureID[i] === '1'){ //Verify if a card was checked
-            cardChecked(btn2[0]);
+    if(Array.isArray(listTaskLeisure)){
+        for(let i = 0; i < (listTaskLeisure.length/3); i++){
+            new Card(arrayLeisureText[i],arrayLeisureDate[i]).createCard(leisureSection);
+            cards = leisureSection.querySelectorAll('div'); 
+            let btn2 = (cards[m].children);//Get the btn edit 
+            if(arrayLeisureID[i] === '1'){ //Verify if a card was checked
+                cardChecked(btn2[0]);
+            }
+            else{
+                cardUncheked(btn2[0]);
+            }
+            m+=2;
         }
-        else{
-            cardUncheked(btn2[0]);
-        }
-        m+=2;
     }
-
 }
 
 function separateArrayText(array){
