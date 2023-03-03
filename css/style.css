@@ -435,7 +435,7 @@ body{
 
 }
 
-@media screen and (max-width:400px){
+@media screen and ((min-width:300px) and (max-width:499px)){
     #tasks{
         display: flex;
         flex-flow: column;
