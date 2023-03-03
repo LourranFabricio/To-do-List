@@ -321,36 +321,42 @@ function addSavedTasks(){
 
 function separateArrayText(array){
     let arrayText = [];
-    if(array.length) return arrayText;
-    else{
+    if(Array.isArray(array)){
         for(let i = 0; i < array.length; i++){
             arrayText.push(array[i]);
             i+=2;
         }
+    }
+    else{
+        return arrayText;
     }
     return arrayText;
 }
 
 function separateArrayDate(array){
     let arrayDate = [];
-    if(array.length) return arrayDate;
-    else{
+    if(Array.isArray(array)){ 
         for(let i = 1; i < array.length; i++){
             arrayDate.push(array[i]);
             i+=2;
         }
+    }
+    else{
+        return arrayDate;
     }
     return arrayDate;
 }
 
 function separateArrayID(array){
     let arrayID = [];
-    if(array.length) return arrayID;
-    else {
-            for(let i = 2; i < array.length; i++){
-                arrayID.push(array[i]);
-                i+=2;
+    if(Array.isArray(array)){
+        for(let i = 2; i < array.length; i++){
+            arrayID.push(array[i]);
+            i+=2;
         }
+    }
+    else{
+        return arrayID;
     }
     return arrayID;
 }
