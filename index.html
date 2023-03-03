@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-cards.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Genos:wght@300&family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,500;1,300&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section id="tasks">
+        <section id="work-task">
+            <div class="title"><p><i class="fa-sharp fa-solid fa-coins"></i> Work task</p></div>
+        </section>
+        <section id="study-task">
+            <div class="title"> <p><i class="fa-sharp fa-solid fa-book"></i> Study task</p></div>
+        </section>
+        <section id="home-task">
+            <div class="title"><p> <i class="fa-sharp fa-solid fa-house"></i> Home task</p></div>
+        </section>
+        <section id="leisure-task">
+            <div class="title"><p> <i class="fa-sharp fa-solid fa-plane"></i> Leisure task</p></div>
+        </section>
+    </section>
+
+    <section id="create-task">
+        <form action="#" id="form">
+            <input type="text" id="input-task" placeholder="Create a task">
+            <select name="selector" id="type-task">
+                <option selected disable value="">Type of task</option>
+                <option value="work">Work</option>
+                <option value="study">Study</option>
+                <option value="home">Home</option>
+                <option value="leisure">Leisure</option>
+            </select>
+            <input type="date" name="date" id="date-task">
+            <button type="button" id="submit-task"><i class="fa-solid fa-plus"></i></button>
+        
+        </form>
+    </section>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

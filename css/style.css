@@ -1,0 +1,534 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+html{
+    font-size: 62.5%;
+    background: url('/img/Mountains-1412683.svg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#tasks{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.9rem;
+    width: 100vw;
+    height: 40vh;
+}
+
+#tasks > section{
+    width: 24.5vw;
+    height: 40vh;
+    background-color: #8e8dbd ;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#tasks > section::-webkit-scrollbar{
+    width: 2rem;
+}
+
+#tasks > section::-webkit-scrollbar-thumb{
+    background-color: #686da5;
+    height: 2rem;
+}
+
+.title{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 24.5vw;
+    height: 4vh;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    padding-right: 4rem;
+}
+
+.title > p{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #3e3a54;
+    margin-top: 0.5rem;
+}
+
+.fa-solid{
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+#create-task{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rem;
+    width: 40vw;
+    height: 15vh;
+    background-color: #686da5;
+}
+
+#input-task{
+    width: 40rem;
+    height: 6rem;
+    padding-left: 1rem;
+    font-size: 2.2rem;
+    margin-right: 2rem;
+    font-weight: bold;
+    outline: none;
+    border: none;
+}
+
+#type-task{
+    width: 25rem;
+    height: 6rem;
+    padding-left: 1rem;
+    margin-right: 2rem;
+    font-size: 2.2rem;
+    font-weight: bold;
+    outline: none;
+    border: none;
+}
+
+#date-task{
+    width: 15rem;
+    height: 6rem;
+    margin-right: 4rem;
+    padding-left: 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    outline: none;
+    border: none;
+}
+
+#submit-task{
+    width: 5rem;
+    height: 5rem;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+#input-task:hover, #type-task:hover, #date-task:hover{
+    cursor: pointer;
+    background-color:#F4F4F4;
+    transition:200ms linear;
+}
+
+#submit-task:hover{
+    background-color:#8e8dbd;
+    border:none;
+    color: aliceblue;
+    cursor:pointer;
+    transition: 200ms linear;
+}
+
+
+
+@media screen and (min-width:1800px){
+
+    body{
+        background-size: auto;
+        background-repeat: no-repeat;
+    }
+    #tasks{
+        gap: 1rem;
+        width: 100vw;
+        height: 40vh;
+    }
+
+    #tasks > section{
+        width: 24.6vw;
+        height: 40vh;
+    }
+
+    .title{
+        width: 24.74vw;
+        height: 4vh;
+        padding: 1rem;
+    }
+
+    .title > p{
+        font-size: 2.2rem;
+        padding-right: 2rem;
+    }
+
+    #create-task{
+        margin-top: 20rem;
+        width: 55vw;
+        height: 15vh;
+        background-color: #686da5;
+    }
+
+    #input-task{
+        width: 40rem;
+        height: 6rem;
+        padding-left: 1rem;
+        font-size: 2.2rem;
+        margin-right: 2rem;
+        font-weight: bold;
+        outline: none;
+        border: none;
+    }
+    
+    #type-task{
+        width: 25rem;
+        height: 6rem;
+        padding-left: 1rem;
+        margin-right: 2rem;
+        font-size: 2.2rem;
+        font-weight: bold;
+        outline: none;
+        border: none;
+    }
+    
+    #date-task{
+        width: 15rem;
+        height: 6rem;
+        margin-right: 4rem;
+        padding-left: 1rem;
+        font-size: 1.8rem;
+        font-weight: bold;
+        outline: none;
+        border: none;
+    }
+    
+    #submit-task{
+        width: 5rem;
+        height: 5rem;
+        padding-top: 0.5rem;
+        padding-left: 1rem;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width:1400px) and (max-width:1799px){
+
+    #tasks > section{
+        width: 24vw;
+        height: 40vh;
+    }
+
+    .title{
+        width: 24vw;
+        height: 4vh;
+        padding: 1rem;
+    }
+
+    .title > p{
+        font-size: 2rem;
+    }
+
+    #create-task{
+        width: 70vw;
+        height: 17vh;
+        background-color: #686da5;
+    }
+}
+
+@media screen and (min-width:1200px) and (max-width:1400px){
+
+    #tasks{
+        gap: 0.7rem;
+    }
+
+    #tasks > section{
+        width: 24.6vw;
+        height: 40vh;
+    }
+
+    #tasks > section::-webkit-scrollbar{
+        width: 1rem;
+    }
+
+    .title{
+        width: 24.6vw;
+        height: 4.5vh;
+    }
+
+    .title > p{
+        font-size: 1.6rem;
+    }
+
+    #create-task{
+        margin-top: 15rem;
+        width: 55vw;
+        height: 16vh;
+        background-color: #686da5;
+    }
+
+    #input-task{
+        width: 30rem;
+        height: 4rem;
+        padding-left: 1rem;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    
+    #type-task{
+        width: 15rem;
+        height: 4rem;
+        margin-right: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    #date-task{
+        width: 10rem;
+        height: 4rem;
+        margin-right: 2rem;
+        font-size: 1.2rem;
+    }
+    
+    #submit-task{
+        width: 3rem;
+        height: 3rem;
+        padding-top: 0.5rem;
+        padding-left: 0.8rem;
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width:900px) and (max-width:1200px){
+    #tasks{
+        gap: 0.7rem;
+    }
+
+    #tasks > section{
+        width: 24.4vw;
+        height: 40vh;
+    }
+
+    #tasks > section::-webkit-scrollbar{
+        width: 1rem;
+    }
+
+    .title{
+        width: 24.4vw;
+    }
+
+    .title > p{
+        font-size: 1.5rem;
+    }
+
+    #create-task{
+        margin-top: 10rem;
+        width: 60vw;
+        height: 12vh;
+    }
+
+    #input-task{
+        width: 10rem;
+        height: 3rem;
+        padding-left: 1rem;
+        font-size: 1.2rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    
+    #type-task{
+        width: 15rem;
+        height: 3rem;
+        margin-right: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    #date-task{
+        width: 10rem;
+        height: 3rem;
+        margin-right: 2rem;
+        font-size: 1.2rem;
+    }
+    
+    #submit-task{
+        width: 3rem;
+        height: 3rem;
+        padding-top: 0.5rem;
+        padding-left: 1rem;
+        font-size: 1.2rem;
+    }
+    
+}
+
+@media screen and (min-width:400px) and (max-width:900px){
+
+    #tasks{
+        gap: 0.7rem;
+    }
+
+    #tasks > section{
+        width: 22.8vw;
+        height: 40vh;
+    }
+
+    #tasks > section::-webkit-scrollbar{
+        width: 1rem;
+    }
+
+    .title{
+        width: 22.8vw;
+        padding-left: 2rem;
+    }
+
+    .title > p{
+        font-size: 1.2rem;
+    }
+
+    #create-task{
+        margin-top: 10rem;
+        width: 70vw;
+        height: 12vh;
+    }
+
+    #input-task{
+        width: 25vw;
+        height: 3rem;
+        padding-left: 1rem;
+        font-size: 1.2rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        padding-left: 0.2rem;
+    }
+    
+    #type-task{
+        width: 15vw;
+        height: 3rem;
+        margin-right: 1rem;
+        font-size: 1.2rem;
+        padding-left: 0.2rem;
+    }
+    
+    #date-task{
+        width: 10vw;
+        height: 3rem;
+        margin-right: 2rem;
+        font-size: 1.2rem;
+        padding-left: 0.2rem;
+    }
+    
+    #submit-task{
+        width: 5vw;
+        height: 3rem;
+        padding-top: 0.6rem;
+        padding-left: 0.8rem;
+        font-size: 1.2rem;
+    }
+
+}
+
+@media screen and (max-width:400px){
+    #tasks{
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1.9rem;
+        width: 100vw;
+        height: 200vh;
+        margin-top: 5rem;
+        margin-bottom: 0rem;
+    }
+
+    #tasks > section{
+        width: 95vw;
+        height: 40vh;
+    }
+
+    #tasks > section::-webkit-scrollbar{
+        width: 1.4rem;
+    }
+
+    .title{
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 95vw;
+        height: 4vh;
+        background-color: rgb(255, 255, 255);
+        padding: 1rem;
+        padding-right: 4rem;
+    }
+    
+    .title > p{
+        font-size: 2rem;
+        font-weight: bold;
+        color: #3e3a54;
+        margin-top: 0.5rem;
+    }
+
+    #create-task{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0rem;
+        margin-bottom: 10rem;
+        width: 95vw;
+        height: 18vh;
+        background-color: #686da5;
+    }
+    
+    #input-task{
+        width: 30vw;
+        height: 4rem;
+        padding-left: 1rem;
+        font-size: 1.4rem;
+        margin-right: 0.5rem;
+        margin-left: 1rem;
+    }
+    
+    #type-task{
+        width: 29vw;
+        height: 4rem;
+        padding-left: 1rem;
+        margin-right: 0.5rem;
+        font-size: 1.4rem;
+        font-weight: bold;
+        outline: none;
+        border: none;
+    }
+    
+    #date-task{
+        width: 26vw;
+        height: 4rem;
+        margin-right: 0rem;
+        margin-left: 0rem;
+        margin-top: 2rem;
+        font-size: 1.4rem;
+        font-weight: bold;
+        outline: none;
+        border: none;
+    }
+    
+    #submit-task{
+        width: 10vw;
+        height: 10vw;
+        margin-top: 2rem;
+        margin-left: 17rem;
+        padding-top: 0.5rem;
+        padding-left: 1rem;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+}

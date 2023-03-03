@@ -1,0 +1,20 @@
+{
+  "name": "lista-de-tarefas",
+  "version": "1.0.0",
+  "description": "Lista de tarefas com armazenamento em local storage",
+  "main": "./js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LourranFabricio/Lista-de-tarefas.git"
+  },
+  "author": "Fabrício Lourran",
+  "license": "ISC",
+  "type":"module",
+  "bugs": {
+    "url": "https://github.com/LourranFabricio/Lista-de-tarefas/issues"
+  },
+  "homepage": "https://github.com/LourranFabricio/Lista-de-tarefas#readme"
+}
