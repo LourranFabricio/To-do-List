@@ -321,7 +321,7 @@ function addSavedTasks(){
 
 function separateArrayText(array){
     let arrayText = [];
-    if(array.length == 0) return arrayText;
+    if(array.length) return arrayText;
     else{
         for(let i = 0; i < array.length; i++){
             arrayText.push(array[i]);
@@ -333,7 +333,7 @@ function separateArrayText(array){
 
 function separateArrayDate(array){
     let arrayDate = [];
-    if(array.length == 0) return arrayDate;
+    if(array.length) return arrayDate;
     else{
         for(let i = 1; i < array.length; i++){
             arrayDate.push(array[i]);
@@ -345,7 +345,7 @@ function separateArrayDate(array){
 
 function separateArrayID(array){
     let arrayID = [];
-    if(array.length == 0) return arrayID;
+    if(array.length) return arrayID;
     else {
             for(let i = 2; i < array.length; i++){
                 arrayID.push(array[i]);
